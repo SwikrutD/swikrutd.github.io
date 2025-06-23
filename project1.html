@@ -1,0 +1,124 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main site styles & fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <title>Needleman-Wunsch Align | Project Details</title>
+</head>
+<body>
+
+<!-- ---------- Header / Hero ---------- -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/dna-hero.jpg') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+    <h1 style="font-size:3.5rem;text-align:center;">
+    Needleman-Wunsch <span style="color:var(--accent);">DNA Alignment Program</span>
+    </h1>
+</div>
+</header>
+
+<!-- ---------- Project Overview ---------- -->
+<section class="fade-in" style="padding:60px 0;">
+<div class="container">
+    <h2 class="about-text">Project Overview</h2>
+    <p>
+        A Python implementation of the global sequence-alignment algorithm that
+        <strong>optimises DNA / protein alignments</strong> with dynamic programming.
+        It supports custom scoring matrices (e.g. BLOSUM 62) or simple match/mismatch
+        schemes, calculates detailed statistics, and exports publication-ready
+        alignments.
+    </p>
+</div>
+</section>
+
+<!-- ---------- Key Features ---------- -->
+<section id="features" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Key Features</h2>
+    <div class="services-list">
+        <div>
+            <i class="fa-solid fa-code"></i>
+            <h3>Dynamic Programming Core</h3>
+            <p>O(<em>mn</em>) time/space Needleman-Wunsch matrix with traceback.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-table-cells-large"></i>
+            <h3>Custom Scoring Matrices</h3>
+            <p>Imports any text-matrix (BLOSUM, PAM, DNA identity) or simple match/mismatch values.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-file-lines"></i>
+            <h3>Rich Output</h3>
+            <p>Alignment blocks wrapped at 80 chars, plus score, matches, mismatches, gaps &amp; similarity %.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ---------- Tech Stack ---------- -->
+<section id="tech" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Tech &amp; Tools</h2>
+    <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+        <li>Python 3 · Standard Library (no external deps)</li>
+        <li>FASTA &amp; custom “.mat” parser</li>
+        <li>Algorithm analysis &amp; optimisation</li>
+        <li>Unit-tests on sample genomic datasets</li>
+    </ul>
+</div>
+</section>
+
+<!-- ---------- Results Snapshot ---------- -->
+<section id="results" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Sample Output</h2>
+    <pre style="font-family: 'Courier New', monospace; background: var(--card-dark); padding: 20px; border-radius: 8px;">
+GATTACA-CTG
+||| | |  |
+GA-T-CAACTG
+<br>
+Score: 23
+Matches: 7   Mismatches: 2   Gaps: 2
+Similarity: 77.8%
+</pre>
+</div>
+</section>
+
+<!-- ---------- Links ---------- -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+<div class="container" style="text-align:center;">
+    <a href="https://github.com/IWU-CS370-Comp-Bio/assignment-1-SwikrutD" target="_blank" class="btn">
+        View Source on GitHub
+    </a>
+    <a href="index.html#projects" class="btn2" style="margin-left:15px;">
+        ← Back to Portfolio
+    </a>
+</div>
+</section>
+
+<!-- ---------- Footer ---------- -->
+<footer class="copyright">
+Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+/* fade-in observer (reuse from main site) */
+const sections = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries=>{
+entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); }});
+},{threshold:.1});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>

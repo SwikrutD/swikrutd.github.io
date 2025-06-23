@@ -1,0 +1,127 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main site styles & fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <title>Web Scraper | Project Details</title>
+</head>
+<body>
+
+<!-- ---------- Header / Hero ---------- -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/scraper-hero.jpg') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+        <h1 style="font-size:3.5rem;text-align:center;">
+            Product &amp; Price <span style="color:var(--accent);">Web Scraper</span>
+        </h1>
+    </div>
+</header>
+
+<!-- ---------- Project Overview ---------- -->
+<section class="fade-in" style="padding:60px 0;">
+<div class="container">
+    <h2 class="about-text">Project Overview</h2>
+    <p>
+        This project involved building a custom Python script to extract structured product and pricing data 
+        from e-commerce websites. Using advanced HTML parsing and pattern recognition, the scraper can automate 
+        repetitive data collection for analysis or reporting.
+    </p>
+</div>
+</section>
+
+<!-- ---------- Key Features ---------- -->
+<section id="features" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Key Features</h2>
+    <div class="services-list">
+        <div>
+            <i class="fa-solid fa-spider"></i>
+            <h3>Automated Scraping</h3>
+            <p>Collects product names, prices, and links from retail websites with minimal human input.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-code"></i>
+            <h3>HTML Navigation</h3>
+            <p>Leverages BeautifulSoup to traverse and extract nested elements from dynamic DOM trees.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-filter"></i>
+            <h3>Smart Filtering</h3>
+            <p>Extracts relevant data only – filtering out ads, pagination, or redundant sections.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-file-export"></i>
+            <h3>Export to CSV</h3>
+            <p>Outputs structured data to spreadsheet-ready formats for easy analysis.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ---------- Tech Stack ---------- -->
+<section id="tech" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Tech &amp; Tools</h2>
+    <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+        <li>Python 3</li>
+        <li>BeautifulSoup · requests</li>
+        <li>Regular Expressions</li>
+        <li>CSV Writer</li>
+        <li>HTML/XPath DOM traversal</li>
+    </ul>
+</div>
+</section>
+
+<!-- ---------- Results Snapshot ---------- -->
+<section id="results" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Sample Output</h2>
+    <pre style="font-family: 'Courier New', monospace; background: var(--card-dark); padding: 20px; border-radius: 8px;">
+Product Name             | Price    | URL
+------------------------|----------|---------------------------------
+Wireless Mouse          | $15.99   | example.com/product/123
+Laptop Stand            | $29.99   | example.com/product/456
+Bluetooth Headphones    | $59.99   | example.com/product/789
+...
+Exported to: products.csv
+    </pre>
+</div>
+</section>
+
+<!-- ---------- Links ---------- -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+<div class="container" style="text-align:center;">
+    <!-- <a href="https://github.com/your-username/web-scraper-project" target="_blank" class="btn">
+        View Source on GitHub
+    </a> -->
+    <a href="index.html#projects" class="btn2" style="margin-left:15px;">
+        ← Back to Portfolio
+    </a>
+</div>
+</section>
+
+<!-- ---------- Footer ---------- -->
+<footer class="copyright">
+Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+/* fade-in observer (reuse from main site) */
+const sections = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries=>{
+entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); }}); 
+},{threshold:.1});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatib1e" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" >
+    <title>Swikrut D</title>
+    <script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <body>
+    <div id="flashMsg" class="alert-box" style="display: none;">
+        <p id="flashText"></p>
+    </div>
+    <div id="header">
+        <div id="container">
+            <nav>
+                <a href="#header"><img src="./assets/logo.png" alt="Logo", class="logo"></a>
+                <ul id="sidemenu">
+                    <li onclick="closemenu()"><a href="#header" >Home</a></li>
+                    <li onclick="closemenu()"><a href="#about">About</a></li>
+                    <li onclick="closemenu()"><a href="#education">Education</a></li>
+                    <li onclick="closemenu()"><a href="#services">Experiences</a></li>
+                    <li onclick="closemenu()"><a href="#projects">Projects</a></li>
+                    <li onclick="closemenu()"><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" id="xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" id="menu" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hello, I am <span>Swikrut</span></h1>
+                <p><span>Computer Science</span> and <span>Physics</span> double major at <br>Illinois Wesleyan University 
+                <br>Aspiring Software Engineer & Research Enthusiast</p>
+            </div>
+        </div>
+    </div>
+
+    <!--About Me Section-->
+    <div id="about" class="fade-in">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./assets/myPhoto.jpg" alt="My Photo">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="about-text">About Me</h1>
+                    <p>
+                    I'm a passionate undergraduate student double majoring in Computer Science and 
+                    Physics at Illinois Wesleyan University, with a strong interest in 
+                    software development, scientific computing, and problem solving. 
+                    I love creating impactful projects that bridge technology and real-world applications. 
+                    I’ve worked in academic, residential, and research settings and am constantly looking 
+                    for opportunities to grow and contribute.
+                    </p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Programming Languages</span><br>
+                                C/C++, Python (with NumPy, Pandas, scikit-learn), Java, JavaScript (ES6+), SQL (MySQL, SQLite), HTML/CSS
+                            </li>
+                            <li>
+                                <span>Web Development & Frameworks</span><br>
+                                Full Stack Development, Flask, Node.js, Bootstrap 5, Responsive Design, Cross-Browser Compatibility
+                            </li>
+                            <li>
+                                <span>Tools & Platforms</span><br>
+                                Version control with Git/GitHub, Docker (Basics), UNIX
+                            </li>
+                            <li>
+                                <span>Data & Physics Tools</span><br>
+                                MATLAB, Data Acquisition, Modelling Physical Systems, Database Design, Microsoft Excel (Power Query, Pivot Tables)
+                            </li>
+                            <li>
+                                <span>Development Methodologies</span><br>
+                                AGILE Methodologies, Software Testing (Unit Testing, Debugging), CRUD Operations, Requirements Analysis, UML Diagrams
+                            </li>
+                            <li>
+                                <span>Soft Skills</span><br>
+                                Technical Writing, Collaborative Problem Solving, Time Management, Mentorship, Public Speaking
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Software Development TA, Illinois Wesleyan University</span>
+                                <br>- Facilitated study sessions for a cohort of 24 students, addressing course concepts and questions; received 
+                                positive feedback from over 90% of participants on improved understanding and application in assignments.
+                                <br>- Assisted students with their learning challenges, enhancing their grasp of core software development concepts.
+                                <br>- Graded homework assignments, providing timely and precise feedback, while streamlining communication 
+                                    between students and faculty.
+                            </li>
+                            <li><span>IBM Accelerate (Research Track)</span>
+                                <br>- Selected from 10,000+ applications (top 5%) for the Research track, focusing on advanced IBM research 
+                                    domains, including AI, Hybrid Cloud, Quantum, and Semi-Conductors.
+                                <br>- Developed professional skills and technical expertise in IBM research areas throughout the program; received 
+                                    mentorship from IBM researchers by expanding professional network and preparing for internships.
+                            </li>
+                            <li><span>Resident Community Advisor</span>
+                                <br>- Mentor a staff of 7 resident advisors and facilitate community building through programming, supporting 
+                                    crisis-response and emergency management.
+                                <br>- Supervise and manage administration for residence hall, including check-ins, maintenance, and staff meetings.
+                                <br>- Collaborate on departmental initiatives and contribute to staff selection, training, and orientation processes.
+                            </li>
+                            <li><span>IT Help Desk Associate, Illinois Wesleyan University</span>
+                                <br>-Provide front-line technical support to students, faculty, and staff by diagnosing and resolving hardware, software, and network issues across campus.
+                                <br>-Maintain and update the university’s IT help desk web system, ensuring efficient management of user-submitted tickets and timely communication of resolutions.
+                                <br>-Collaborate with full-time IT staff to implement solutions, document recurring problems, and contribute to process improvements through clear communication and user-focused service.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="certifications">
+    <ul>
+        <li><span>CS50: Introduction to Computer Science – Harvard University, edX</span>
+            <br>- Completed rigorous coursework covering algorithms, data structures, memory, web programming, and software engineering fundamentals.
+            <br>- Built projects using C, Python, Flask, SQL, and JavaScript, demonstrating understanding of low-level programming and full stack concepts.
+            <br>- Emphasized problem-solving and computational thinking in weekly problem sets and a final capstone project.
+        </li>
+        <li><span>The Complete 2024 Web Development Bootcamp – Udemy</span>
+            <br>- Learned full stack web development including HTML, CSS, JavaScript, Node.js, Express, MongoDB, and React.
+            <br>- Built real-world web applications with authentication, REST APIs, and responsive design using modern developer tools.
+            <br>- Gained experience deploying applications and following project development lifecycles using version control.
+        </li>
+        <li><span>Machine Learning A-Z™: Hands-On Python & R – Udemy</span>
+            <br>- Acquired hands-on experience in machine learning algorithms including regression, classification, clustering, and reinforcement learning.
+            <br>- Built models using Python and R with practical applications in data preprocessing, model evaluation, and real-world prediction tasks.
+            <br>- Covered libraries such as scikit-learn, pandas, NumPy, and matplotlib.
+        </li>
+        <li><span>Automate the Boring Stuff with Python – Udemy</span>
+            <br>- Developed Python scripts to automate everyday tasks such as file handling, web scraping, and working with spreadsheets and PDFs.
+            <br>- Focused on practical automation scenarios including email and text message automation, organizing files, and GUI automation.
+            <br>- Strengthened Python programming foundations in real-world contexts.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div id="education" class="fade-in">
+        <div class="container">
+            <h1 class="about-text">Education</h1>
+            <div class="row">
+                <div class="education-col">
+                    <h3>Bachelor of Science – Illinois Wesleyan University</h3>
+                    <p>
+                        <strong>Majors:</strong> Computer Science & Physics<br>
+                        <strong>GPA:</strong> 3.95 / 4.0<br>
+                        <strong>Honors:</strong> Dean's List (All Semesters)<br>
+                        <strong>Expected Graduation:</strong> June 2026<br><br>
+                        <strong>Relevant Courses:</strong> Data Structures and Algorithms, Software Development, Computational Biology, 
+                        Computer Architecture, Artificial Intelligence, Physics I & II, Modern Physics, Linear Algebra, Mathematical Methods in Physical Sciences<br><br>
+                        <strong>Activities:</strong> ACM Club, Society of Physics Students, Undergraduate Teaching Assistant
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Services-->
+    <div id="services" class="fade-in">
+        <div class="container">
+            <h1 class="about-text">My Involvements</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Computer Science</h2>
+                    <p>Designed web apps like Spendr with account creation, login, and CRUD operations.</p>
+                    <a href="#projects">See Projects</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-palette"></i>
+                    <h2>Academic Mentorship</h2>
+                    <p>Teaching Assistant for Software Development; help students grasp core programming and problem-solving skills.</p>
+                    <a href="#about">Learn More</a>
+
+                </div>
+                <div>
+                    <i class="fa-solid fa-atom"></i>
+                    <h2>Tech & Research Programs</h2>
+                    <p>IBM Accelerate participant focused on emerging tech (AI, Cloud, Quantum); mentored by IBM researchers.</p>
+                    <a href="https://www.linkedin.com/in/swikrutd/" target="_blank">View LinkedIn</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--projects-->
+    <div id="projects" class="fade-in">
+        <div class="container">
+            <h1 class="about-text">My Projects</h1>
+            <div class="project-list">
+                <div class="work">
+                    <img src="assets/work-1.jpg" alt="Work 1">
+                    <div class="layer">
+                        <h3>Needleman-Wunsch DNA Alignment PRogram</h3>
+                        <p>Developed a Dynamic-programming based alignment tool for DNA sequences with scoring-matrix support, key statistics, and matrix traceback.</p>
+                        <a href="project1.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>                    
+                </div>
+                <div class="work">
+                    <img src="assets/work-2.jpg" alt="Work 2">
+                    <div class="layer">
+                        <h3>Spendr - Smart Expense Tracker</h3>
+                        <p>A responsive, full-stack expense tracking web app that supports user authentication, categorized expense management, visual analytics, and secure password controls. Built using Flask, SQLite, and Matplotlib.</p>
+                        <a href="project2.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/work-3.jpg" alt="Work 3">
+                    <div class="layer">
+                        <h3>Web Product & Price Scraper</h3>
+                        <p>Efficient web scraper built with Python and BeautifulSoup to collect product titles, prices, and links from e-commerce platforms. Outputs clean CSVs for data analysis with advanced HTML parsing and smart filtering to avoid irrelevant content.</p>
+                        <a href="project3.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects 4-6 -->
+            <div class="project-list">
+                <div class="work">
+                    <img src="assets/work-4.png" alt="Work 4">
+                    <div class="layer">
+                        <h3>Stefan–Boltzmann Lab</h3>
+                        <p>Undergraduate physics experiment measuring filament temperature via 4-wire resistance and validating the T⁴ radiation law with NI ELVIS II+ DAQ and LabVIEW.</p>
+                        <a href="project4.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>                    
+                </div>
+                <div class="work">
+                    <img src="assets/work-5.png" alt="Work 5">
+                    <div class="layer">
+                        <h3>Geiger–Müller Plateau</h3>
+                        <p>Geiger–Müller Plateau Study — Mapped counts-per-minute vs. bias voltage to locate the plateau region of a G-M tube, establishing a safe 25 %-from-threshold operating voltage for beta-decay detection.</p>
+                        <a href="project5.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/work-6.jpg" alt="Work 6">
+                    <div class="layer">
+                        <h3>Built a 4-Bit CPU & Battleship Game in Assembly</h3>
+                        <p>Collaborated in designing and simulating a custom 4-bit CPU with a bespoke ISA, register-level hardware control, MIPS-inspired instruction formats, and memory-mapped I/O to emulate assembly programs.</p>
+                        <a href="project6.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="https://github.com/SwikrutD" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!--Contact--> 
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:sdhanork@iwu.edu">sdhanork@iwu.edu</a></p>
+                    <p><i class="fa-solid fa-phone"></i> <a href="tel:+13096127516">309-612-7516</a></p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/swikrutd/"> <i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/swikrut_"> <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/SwikrutD"> <i class="fa-brands fa-github"></i></a>
+
+                    </div class="resume-button">
+                        <a href="assets/Swikrut_Dhanorkar_Resume.pdf" download class="btn btn2">Get My Resume</a>
+                    </div>
+                
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Enter Name" required>
+                        <input type="email" name = "Email" placeholder="Enter Email" required>
+                        <textarea name="Message" rows="6" placeholder="Enter Message"></textarea>
+                        <button class="btn2" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <footer> Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i> </footer>
+        </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link")
+        }
+
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab")
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-- Responsiveness -->
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<!-- Contact Form -->
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzSel4DVj6u8YKZJNYa3TBUlNJ4Ac0ErJNJMD9q54RaiamC35P5ggggtIlUwUAR9LnH/exec'
+const form = document.forms['submit-to-google-sheet']
+const flashMsg = document.getElementById("flashMsg")
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+    flashMsg.style.display = "block";
+    document.getElementById("flashText").innerText = "Message sent successfully.";
+    setTimeout(function(){
+        flashMsg.style.display = "none";
+    }, 5000);
+    form.reset();
+})
+    .catch(error => console.error('Error!', error.message))
+})
+</script>
+
+<!-- Fade -->
+<script>
+const faders = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+    if (entry.isIntersecting) {
+    entry.target.classList.add('visible');
+    }
+});
+}, { threshold: 0.1 });
+
+faders.forEach(fade => observer.observe(fade));
+</script>
+
+</body>
+</html>

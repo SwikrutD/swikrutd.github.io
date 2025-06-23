@@ -1,0 +1,131 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main site styles & fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <title>Spendr | Project Details</title>
+</head>
+<body>
+
+<!-- ---------- Header / Hero ---------- -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/spendr-hero.jpg') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+        <h1 style="font-size:3.5rem;text-align:center;">
+            Spendr <span style="color:var(--accent);">Expense Tracker Web App</span>
+        </h1>
+    </div>
+</header>
+
+<!-- ---------- Project Overview ---------- -->
+<section class="fade-in" style="padding:60px 0;">
+<div class="container">
+    <h2 class="about-text">Project Overview</h2>
+    <p>
+        Spendr is a full-featured, secure expense-tracking web application developed as part of a collaborative 
+        software engineering course. It allows users to manage budgets, upload, edit, and categorize expenses, 
+        while visualizing their spending habits through intuitive graphs and statistics.
+    </p>
+</div>
+</section>
+
+<!-- ---------- Key Features ---------- -->
+<section id="features" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Key Features</h2>
+    <div class="services-list">
+        <div>
+            <i class="fa-solid fa-database"></i>
+            <h3>Full CRUD Expense System</h3>
+            <p>Create, view, edit, and delete expenses with real-time feedback and database persistence.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-chart-pie"></i>
+            <h3>Graphical Analysis</h3>
+            <p>Visualize spending by category and month with dynamic pie charts powered by Matplotlib.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-lock"></i>
+            <h3>User Authentication</h3>
+            <p>Secure user account system with hashed passwords and session management.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-bullseye"></i>
+            <h3>Budget Tracking</h3>
+            <p>Custom monthly budget limit per user with visual budget comparison.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ---------- Tech Stack ---------- -->
+<section id="tech" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Tech &amp; Tools</h2>
+    <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+        <li>Python · Flask · SQLite</li>
+        <li>Matplotlib for graphs</li>
+        <li>HTML, CSS (custom + utility-based), JavaScript</li>
+        <li>Jinja2 Templating, Bootstrap Icons, Charting</li>
+        <li>Session-based auth and password hashing (Werkzeug)</li>
+    </ul>
+</div>
+</section>
+
+<!-- ---------- Results Snapshot ---------- -->
+<section id="results" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Sample Output</h2>
+    <pre style="font-family: 'Courier New', monospace; background: var(--card-dark); padding: 20px; border-radius: 8px;">
+Expenses - April 2024
+
+📊 Food:       $145
+🛍 Shopping:   $82
+🚗 Transport:  $60
+🏠 Rent:       $500
+
+💰 Total Spent: $787 / $1000 Budget
+✔ Budget Status: Under Limit
+    </pre>
+</div>
+
+<img src="assets/spendr-piechart.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+</section>
+
+<!-- ---------- Links ---------- -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+<div class="container" style="text-align:center;">
+    <a href="https://github.com/IWU-CS253/cs253-s24-project-expensetracker?tab=readme-ov-file" target="_blank" class="btn">
+        View Source on GitHub
+    </a>
+    <a href="index.html#projects" class="btn2" style="margin-left:15px;">
+        ← Back to Portfolio
+    </a>
+</div>
+</section>
+
+<!-- ---------- Footer ---------- -->
+<footer class="copyright">
+Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+/* fade-in observer (reuse from main site) */
+const sections = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries=>{
+entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); }}); 
+},{threshold:.1});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>

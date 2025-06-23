@@ -1,0 +1,146 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main site styles & fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <title>4‑Bit CPU &amp; Battleship | Project Details</title>
+</head>
+<body>
+
+<!-- ---------- Header / Hero ---------- -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/4bitcpu-hero.jpg') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+        <h1 style="font-size:3.2rem;text-align:center;">
+            Custom <span style="color:var(--accent);">4‑Bit CPU</span> &amp; Assembly Battleship
+        </h1>
+    </div>
+</header>
+
+<!-- ---------- Project Overview ---------- -->
+<section class="fade-in" style="padding:60px 0;">
+<div class="container">
+    <h2 class="about-text">Project Overview</h2>
+    <p>
+        A collaborative digital‑logic project where we <strong>designed and bread‑boarded a 4‑bit RISC‑style CPU</strong>, wrote a
+        minimal <abbr title="Instruction Set Architecture">ISA</abbr>, and built two demo programs—an LED Battleship game and an
+        Fibonacci calculator—entirely in our custom assembly language. The work covered
+        hardware description, micro‑architecture, and low‑level software development.
+    </p>
+</div>
+</section>
+
+<!-- ---------- Architecture Highlights ---------- -->
+<section class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Architecture Highlights</h2>
+    <div class="services-list">
+        <div>
+            <i class="fa-solid fa-microchip"></i>
+            <h3>16‑bit Instruction Word</h3>
+            <p>4‑bit opcode, 3‑bit register fields, 6‑bit immediates.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-microchip"></i>
+            <h3>4 Register File</h3>
+            <p>One hard‑wired to zero, three general purpose.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-microchip"></i>
+            <h3>ALU &amp; Zero‑Flag</h3>
+            <p>Add, sub, and zero‑detect for branching.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-microchip"></i>
+            <h3>Memory‑Mapped I/O</h3>
+            <p>Shared data/I&nbsp;space to drive LEDs &amp; read buttons.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ---------- Instruction Set ---------- -->
+<section class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Core Instruction Set</h2>
+    <pre style="font-family:'Courier New',monospace;background:var(--card-dark);padding:20px;border-radius:8px;overflow-x:auto;">
+# R‑Type
+0000 rd, rs   ; ADD   rd ← rd + rs
+0001 rd, rs   ; SUB   rd ← rd – rs
+
+# I‑Type
+0010 rd, rs, imm  ; BEQ  if rd == rs PC←PC+imm
+0011 rd, imm(rs)  ; LW   rd ← MEM[rs+imm]
+0100 rd, imm(rs)  ; SW   MEM[rs+imm] ← rd
+0101 rd, imm      ; IN   rd ← IO[imm]
+0110 rd, imm      ; OUT  IO[imm] ← rd
+
+# J‑Type
+0111 rd           ; JMP  PC ← rd
+    </pre>
+</div>
+</section>
+
+<!-- ---------- Assembly Demo ---------- -->
+<section class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Assembly Demo – Battleship Snippet</h2>
+    <pre style="font-family:'Courier New',monospace;background:var(--card-dark);padding:20px;border-radius:8px;overflow-x:auto;">
+# placeShip: read X/Y buttons, light green LED
+LOOP:   in  r1, 0x01      ; read X‑axis button
+        in  r2, 0x02      ; read Y‑axis button
+        add r3, r1        ; update cursor X
+        add r3, r2        ; update cursor Y
+        out r3, 0x10      ; move yellow LED
+        in  r0, 0x04      ; read ENTER
+        beq r0, r0, LOOP  ; if not pressed, loop
+        out r3, 0x11      ; fix ship (green)
+    </pre>
+</div>
+</section>
+
+<!-- ---------- Learnings ---------- -->
+<section class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Key Learnings</h2>
+    <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+        <li>Designed full datapath &amp; control in Logisim and wired on breadboard.</li>
+        <li>Wrote assembler scripts to translate mnemonics → machine code.</li>
+        <li>Optimised instruction encoding for minimal gate count.</li>
+        <li>Adapted MIPS conventions to a constrained 4‑register environment.</li>
+    </ul>
+</div>
+</section>
+
+<!-- ---------- Links ---------- -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+<div class="container" style="text-align:center;">
+    <a href="index.html#projects" class="btn2" style="margin-left:15px;">
+        ← Back to Portfolio
+    </a>
+</div>
+</section>
+
+<!-- ---------- Footer ---------- -->
+<footer class="copyright">
+Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+/* fade-in observer */
+const sections=document.querySelectorAll('.fade-in');
+const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:.1});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>

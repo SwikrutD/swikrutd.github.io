@@ -1,0 +1,136 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main site styles & fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <title>Geiger–Müller Plateau Study | Project Details</title>
+</head>
+<body>
+
+<!-- ---------- Header / Hero ---------- -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/gm-plateau-hero.jpg') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+        <h1 style="font-size:3.5rem;text-align:center;">
+            Geiger–Müller <span style="color:var(--accent);">Plateau Study</span>
+        </h1>
+    </div>
+</header>
+
+<!-- ---------- Project Overview ---------- -->
+<section class="fade-in" style="padding:60px 0;">
+<div class="container">
+    <h2 class="about-text">Project Overview</h2>
+    <p>
+        This experiment characterised the operating plateau of a Geiger–Müller tube by measuring
+        <strong>counts‑per‑minute (CPM)</strong> as a function of bias voltage for a beta source. The
+        goal was to determine a safe, stable operating voltage and to illustrate the physics of
+        gas amplification and threshold behaviour in radiation detectors.
+    </p>
+</div>
+</section>
+
+<!-- ---------- Apparatus & Method ---------- -->
+<section class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Apparatus &amp; Method</h2>
+    <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+        <li>End‑window Geiger–Müller tube on adjustable stand</li>
+        <li>Adjustable HV supply &amp; scaler counter (0–1.5 kV, 0–9999 counts)</li>
+        <li>Encapsulated beta source (Sr‑90)</li>
+        <li>Stop‑watch &amp; Lab notebook for manual logging</li>
+        <li>Voltage stepped in 25 V increments; 60 s integration per point</li>
+    </ul>
+</div>
+</section>
+
+<!-- ---------- Key Findings ---------- -->
+<section id="features" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Key Findings</h2>
+    <div class="services-list">
+        <div>
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Start Voltage</h3>
+            <p>No counts observed until 610 V → threshold for first Townsend avalanche.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-wave-square"></i>
+            <h3>Stable Plateau</h3>
+            <p>CPM flat (±3 %) from 620 V – 1000 V, ideal for routine measurements.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <h3>Over‑voltage Risk</h3>
+            <p>Above 1000 V counts rose sharply, indicating onset of continuous discharge.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ---------- Tools ---------- -->
+<section id="tech" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Tools &amp; Software</h2>
+    <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+        <li>Analog scaler counter &amp; HV supply</li>
+        <li>Python + Matplotlib for post‑lab plotting &amp; linear fits</li>
+        <li>Excel for quick CPM calculations</li>
+    </ul>
+</div>
+</section>
+
+<!-- ---------- Results Snapshot ---------- -->
+<section id="results" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Sample Data</h2>
+    <pre style="font-family: 'Courier New', monospace; background: var(--card-dark); padding: 20px; border-radius: 8px;">
+Voltage (V)   CPM
+580 – 600     0
+610           19 ← start voltage
+700           756
+800           782
+900           796
+1000          805
+1125          980 ← onset of discharge
+    </pre>
+</div>
+</section>
+
+<!-- ---------- Links ---------- -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+<div class="container" style="text-align:center;">
+    <a href="assets/Geiger_Plateau_Report.pdf" target="_blank" class="btn">
+        Download Full Report (PDF)
+    </a>
+    <a href="index.html#projects" class="btn2" style="margin-left:15px;">
+        ← Back to Portfolio
+    </a>
+</div>
+</section>
+
+<!-- ---------- Footer ---------- -->
+<footer class="copyright">
+Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+/* fade-in observer (reuse from main site) */
+const sections = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); }});
+},{threshold:.1});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>

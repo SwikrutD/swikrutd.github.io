@@ -1,0 +1,137 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main site styles & fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <title>Stefan–Boltzmann Experiment | Project Details</title>
+</head>
+<body>
+
+<!-- ---------- Header / Hero ---------- -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/stefan-boltzmann-hero.jpg') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+        <h1 style="font-size:3.5rem;text-align:center;">
+            Stefan–Boltzmann <span style="color:var(--accent);">Radiation Lab</span>
+        </h1>
+    </div>
+</header>
+
+<!-- ---------- Project Overview ---------- -->
+<section class="fade-in" style="padding:60px 0;">
+<div class="container">
+    <h2 class="about-text">Project Overview</h2>
+    <p>
+        In this undergraduate physics experiment I determined the temperature of a tungsten filament from its
+        electrical resistance and empirically confirmed the <strong>Stefan–Boltzmann T<sup>4</sup></strong> radiation law.
+        Using a NI&nbsp;ELVIS&nbsp;II+ DAQ and LabVIEW data‑logging, I measured current, voltage, and radiant output while
+        sweeping the supply from 1&nbsp;V&nbsp;to&nbsp;12&nbsp;V. A linear fit of <em>P</em> vs <em>T</em><sup>4</sup> yielded a slope within 1 % of the
+        theoretical constant, validating black‑body radiation theory.
+    </p>
+</div>
+</section>
+
+<!-- ---------- Apparatus & Method ---------- -->
+<section class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Apparatus &amp; Method</h2>
+    <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+        <li>Stefan–Boltzmann lamp + heat shield</li>
+        <li>4‑wire Kelvin probe for 0.276&nbsp;Ω filament resistance</li>
+        <li>NI&nbsp;ELVIS II+ DAQ (<em>1&nbsp;MS/s</em>, 11&nbsp;MΩ input)</li>
+        <li>LabVIEW VI for synchronous V/I/Radiation logging</li>
+        <li>Analog PSU &amp; meters (0‑13 V, 0‑3 A)</li>
+    </ul>
+</div>
+</section>
+
+<!-- ---------- Key Findings ---------- -->
+<section id="features" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Key Findings</h2>
+    <div class="services-list">
+        <div>
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Thermal‑Resistance Calibration</h3>
+            <p>Mapped filament resistance to temperature from 296 K to 15 890 K using measured V‑I curves.</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>P ∝ T<sup>4</sup></h3>
+            <p>Linear regression on <em>P</em> vs. <em>T</em><sup>4</sup> gave slope 4.103 ± 0.074 (≈ 1 % error).</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Equation Debug</h3>
+            <p>Identified and corrected typographical error in the lab manual’s power expression.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ---------- Tech Stack ---------- -->
+<section id="tech" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Tools &amp; Software</h2>
+    <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+        <li>LabVIEW 2024 – custom VI for streaming to CSV</li>
+        <li>NI&nbsp;ELVIS II+ Instrumentation Suite</li>
+        <li>Python (NumPy, Matplotlib) for regression &amp; plotting</li>
+        <li>Excel for quick data sanity checks</li>
+    </ul>
+</div>
+</section>
+
+<!-- ---------- Results Snapshot ---------- -->
+<section id="results" class="fade-in" style="padding:40px 0;">
+<div class="container">
+    <h2 class="about-text">Sample Data</h2>
+    <pre style="font-family: 'Courier New', monospace; background: var(--card-dark); padding: 20px; border-radius: 8px;">
+V (V)  I (A)  P_rad (mV)  R(Ω)  T(K)
+1.0    0.96   0.682       1.04  322
+5.0    1.94   8.646       2.57  3598
+12.0   3.06   35.132      3.92  15 891
+
+Fit:  ln P = 4.103 ln T  –  18.27
+R² = 0.997
+    </pre>
+</div>
+</section>
+
+<!-- ---------- Links ---------- -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+<div class="container" style="text-align:center;">
+    <a href="assets/Stefan_Boltzmann_Report.pdf" target="_blank" class="btn">
+        Download Full Report (PDF)
+    </a>
+    <a href="index.html#projects" class="btn2" style="margin-left:15px;">
+        ← Back to Portfolio
+    </a>
+</div>
+</section>
+
+<!-- ---------- Footer ---------- -->
+<footer class="copyright">
+Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+/* fade-in observer (reuse from main site) */
+const sections = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries=>{
+entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); }});
+},{threshold:.1});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
