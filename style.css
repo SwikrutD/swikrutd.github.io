@@ -32,7 +32,7 @@ body {
     width: 100%;
     background: 
     linear-gradient(to bottom, rgba(10,10,10,0) 60%, rgba(14,13,26,0.95) 100%),
-    url(assets/background-dark.jpg) no-repeat center/cover;
+    url(assets/background-dark-webp.webp) no-repeat center/cover;
     background-size: cover;
     background-position:right
 }
