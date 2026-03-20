@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>RPA Developer | Lakeside Book Company</title>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCMTC6HS8X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VCMTC6HS8X');
+    </script>
+</head>
+<body>
+
+<!-- Header / Hero -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/rpa_card.png') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+        <h1 style="font-size:3.5rem;text-align:center;">
+            RPA Developer – <span style="color:var(--accent);">Lakeside Book Company</span>
+        </h1>
+    </div>
+</header>
+
+<!-- Role Overview -->
+<section class="fade-in" style="padding:60px 0;">
+    <div class="container">
+        <h2 class="about-text">Role Overview</h2>
+        <p>
+            As a <strong>Robotic Process Automation Developer</strong> at Lakeside Book Company, I design and deploy
+            end-to-end UiPath automations that eliminate repetitive manual workflows across production reporting,
+            vendor communications, and data distribution. By replacing multi-step human processes with scheduled,
+            unattended bots, I reduced task completion time by <strong>85%</strong> — from 30–45 minutes down to
+            under 5 minutes — saving the business <strong>15+ hours of manual work every week</strong>.
+        </p>
+        <p style="margin-top: 12px; color: var(--text-secondary, #aaa); font-size: 0.9rem;">
+            September 2025 – Present &nbsp;·&nbsp; Crawfordsville, IN
+        </p>
+    </div>
+</section>
+
+<!-- Impact -->
+<section id="impact" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Impact</h2>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-gauge-high"></i>
+                <h2>85% Time Reduction</h2>
+                <p>Processes that previously took 30–45 minutes per run now complete in under 5 minutes with zero manual intervention.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-clock"></i>
+                <h2>15+ Hours Saved Weekly</h2>
+                <p>Across all deployed automations, the team reclaims over 15 hours of productive time every week.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-robot"></i>
+                <h2>7+ Bots in Production</h2>
+                <p>A suite of daily and hourly bots running before business hours, ensuring data and reports are ready at the start of each shift.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Automations -->
+<section id="projects" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Featured Automations</h2>
+
+        <!-- Bot 1 -->
+        <div style="background: rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:32px; margin-top:40px;">
+            <p style="color:var(--accent); font-size:13px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">
+                Production Reporting &nbsp;·&nbsp; Daily · Mon–Fri
+            </p>
+            <h3 style="font-size:22px; font-weight:600; margin-bottom:12px;">Late Press Titles Report</h3>
+            <p style="font-size:14px; color:#ccc; line-height:1.8; margin-bottom:20px;">
+                A fully automated reporting pipeline that monitors an email inbox for a daily production data extract,
+                applies business logic to filter out irrelevant records (future ship dates and on-hold jobs),
+                consolidates duplicate entries by summing remaining hours, and produces a formatted, pivot-ready
+                Excel report — all delivered to production stakeholders before the workday begins.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">IMAP Email</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Excel / XLSX</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Google Sheets</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Pivot Tables</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Data Filtering</span>
+            </div>
+        </div>
+
+        <!-- Bot 2 -->
+        <div style="background: rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:32px; margin-top:24px;">
+            <p style="color:var(--accent); font-size:13px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">
+                Vendor Management &nbsp;·&nbsp; Scheduled
+            </p>
+            <h3 style="font-size:22px; font-weight:600; margin-bottom:12px;">MVP1 PO Follow-Ups</h3>
+            <p style="font-size:14px; color:#ccc; line-height:1.8; margin-bottom:20px;">
+                Automates the entire purchase order follow-up workflow — from logging into a web-based plant
+                management system and pulling an overdue PO line items report, to grouping results by vendor,
+                looking up contact emails, and dispatching personalized follow-up emails with vendor-specific
+                Excel attachments. Handles edge cases where vendor contact data is missing by notifying plant
+                contacts directly, ensuring no vendor falls through the cracks.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Chrome Automation</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Web App Interaction</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Excel Export</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Per-Vendor Emails</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Exception Handling</span>
+            </div>
+        </div>
+
+        <!-- Bot 3 -->
+        <div style="background: rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:32px; margin-top:24px;">
+            <p style="color:var(--accent); font-size:13px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">
+                Logistics Reporting &nbsp;·&nbsp; Hourly · Queue-Based
+            </p>
+            <h3 style="font-size:22px; font-weight:600; margin-bottom:12px;">LogPro Reports – Dispatcher &amp; Performer</h3>
+            <p style="font-size:14px; color:#ccc; line-height:1.8; margin-bottom:20px;">
+                A scalable two-bot architecture built on UiPath's ReFramework with Orchestrator queues. The Dispatcher
+                reads a Google Sheet config to determine which of 17 billing and logistics report types to run, and
+                calculates dynamic date ranges (Prior Day, Month-to-Date, Prior Week, and custom work day logic).
+                The Performer processes each queue item by connecting to a legacy AS400 terminal, selecting the
+                correct report, and routing outputs to the right recipients — with full transaction-level error
+                handling and automated failure alerts.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">ReFramework</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Orchestrator Queues</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">AS400 Terminal</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">Google Sheets</span>
+                <span style="font-size:12px; padding:4px 12px; border:1px solid rgba(235,13,127,0.4); border-radius:4px; color:var(--accent);">17 Report Types</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Tech Stack -->
+<section id="tech" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Tech &amp; Tools</h2>
+        <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+            <li>UiPath Studio &amp; Orchestrator – bot development, scheduling, and deployment</li>
+            <li>ReFramework – queue-based architecture for scalable transaction processing</li>
+            <li>Google Sheets API – dynamic configuration and dispatcher control</li>
+            <li>AS400 / TN3270 Terminal – legacy system automation via System I Navigator</li>
+            <li>Chrome &amp; web automation – interaction with browser-based plant management systems</li>
+            <li>Microsoft Excel / Access – report generation, formatting, and database queries</li>
+            <li>IMAP / SMTP – automated email monitoring and distribution</li>
+            <li>SAP Business Objects – BI report refresh and export automation</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Technical Highlights -->
+<section id="highlights" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Technical Highlights</h2>
+        <pre style="font-family: 'Courier New', monospace; background: var(--card-dark); padding: 20px; border-radius: 8px; line-height: 1.8;">
+✔  7 production bots across reporting, logistics, and vendor workflows
+✔  85% reduction in process time: 30–45 min tasks now under 5 min
+✔  Scalable Dispatcher + Performer architecture handling 17 report types
+✔  Dynamic date range logic (Prior Day, MTD, Prior Week, Work Day Calc)
+✔  Full exception handling with automated alerts to support team
+✔  Credential automation via UiPath asset store
+✔  Google Sheet-driven config for zero-code scheduling adjustments
+        </pre>
+    </div>
+</section>
+
+<!-- Links -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+    <div class="container" style="text-align:center;">
+        <a href="https://www.linkedin.com/in/swikrutd/" target="_blank" class="btn2" style="display:inline-block;">View LinkedIn</a><br>
+        <a href="index.html#services" class="btn2" style="margin-top:15px; display:inline-block;">← Back to Portfolio</a>
+    </div>
+</section>
+
+<footer class="copyright">
+    Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+const sections = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: .1 });
+sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

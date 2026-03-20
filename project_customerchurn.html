@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Customer Churn Model | Project Details</title>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCMTC6HS8X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VCMTC6HS8X');
+    </script>
+</head>
+<body>
+
+<!-- Header / Hero -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/customerchurn_card.png') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+        <h1 style="font-size:3.5rem;text-align:center;">
+            Customer Churn <span style="color:var(--accent);">Prediction Model</span>
+        </h1>
+    </div>
+</header>
+
+<!-- Project Overview -->
+<section class="fade-in" style="padding:60px 0;">
+    <div class="container">
+        <h2 class="about-text">Project Overview</h2>
+        <p>
+            A machine learning project focused on predicting customer churn using classification techniques.
+            The model leverages <strong>logistic regression and ensemble methods</strong> to achieve 85%+ accuracy,
+            with XGBoost and feature engineering driving a ~12% improvement over the baseline. A full
+            analytical report with visualizations was produced to support data-driven business decisions.
+        </p>
+        <p style="margin-top: 12px; color: var(--text-secondary, #aaa); font-size: 0.9rem;">
+            October 2025 – November 2025
+        </p>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section id="features" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Key Features</h2>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                <h3>Ensemble Methods</h3>
+                <p>XGBoost classifier combined with logistic regression, boosting prediction performance ~12% above the baseline model.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Model Evaluation</h3>
+                <p>ROC-AUC scoring, confusion matrices, and precision/recall analysis used to validate and compare model performance.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Analytical Report</h3>
+                <p>Detailed report with key statistics, visualizations, and insights to support data-driven retention strategies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack -->
+<section id="tech" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Tech &amp; Tools</h2>
+        <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+            <li>Python 3 – core development language</li>
+            <li>Scikit-learn – logistic regression, cross-validation, metrics</li>
+            <li>XGBoost – gradient-boosted ensemble classifier</li>
+            <li>Pandas &amp; NumPy – data preprocessing and feature engineering</li>
+            <li>Matplotlib &amp; Seaborn – visualizations and analytical report</li>
+            <li>ROC-AUC – primary evaluation metric</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Results -->
+<section id="results" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Results</h2>
+        <pre style="font-family: 'Courier New', monospace; background: var(--card-dark); padding: 20px; border-radius: 8px; line-height: 1.8;">
+Baseline Accuracy:   ~73%
+Final Accuracy:       85%+   (+12% via feature engineering &amp; XGBoost)
+Primary Metric:       ROC-AUC
+Key Features:         Tenure, contract type, monthly charges, support calls
+Output:               Detailed report with charts &amp; retention insights
+        </pre>
+    </div>
+</section>
+
+<!-- Links -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+    <div class="container" style="text-align:center;">
+        <a href="https://github.com/SwikrutD" style="margin-left:15px; display: inline-block;" class="btn">View on GitHub</a> <br>
+        <a href="index.html#projects" class="btn2" style="margin-left:15px;">← Back to Portfolio</a>
+    </div>
+</section>
+
+<footer class="copyright">
+    Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+const sections = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: .1 });
+sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

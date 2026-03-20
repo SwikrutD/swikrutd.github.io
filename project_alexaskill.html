@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Bhagavad Gita Alexa Skill | Project Details</title>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCMTC6HS8X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VCMTC6HS8X');
+    </script>
+</head>
+<body>
+
+<!-- Header / Hero -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/alexaskill_card.jpg') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+        <h1 style="font-size:3.5rem;text-align:center;">
+            Bhagavad Gita Guide – <span style="color:var(--accent);">Alexa Skill</span>
+        </h1>
+    </div>
+</header>
+
+<!-- Project Overview -->
+<section class="fade-in" style="padding:60px 0;">
+    <div class="container">
+        <h2 class="about-text">Project Overview</h2>
+        <p>
+            A voice-interactive Amazon Alexa skill that delivers <strong>1,000+ quotes and facts</strong>
+            from the Bhagavad Gita. Built on the Alexa Developer Platform with an AWS Lambda backend,
+            it supports multiple interaction types and is optimized for natural conversational speech flow
+            using SSML. The skill is publicly listed on the Alexa Skills Store.
+        </p>
+        <p style="margin-top: 12px; color: var(--text-secondary, #aaa); font-size: 0.9rem;">
+            June 2025 – August 2025
+        </p>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section id="features" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Key Features</h2>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-microphone"></i>
+                <h3>Voice Interaction</h3>
+                <p>Supports 3+ interaction types including random quotes, chapter-specific facts, and thematic teachings from the Bhagavad Gita.</p>
+            </div>
+            <div>
+                <i class="fa-brands fa-aws"></i>
+                <h3>AWS Lambda Backend</h3>
+                <p>Serverless Node.js backend on AWS Lambda, integrated with the Alexa SDK for efficient, scalable request handling.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-store"></i>
+                <h3>Published on Alexa Skills Store</h3>
+                <p>Fully published with invocation phrases, publishing assets, and metadata managed through the Alexa Developer Console.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack -->
+<section id="tech" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Tech &amp; Tools</h2>
+        <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+            <li>Amazon Alexa Developer Platform – skill framework and intent handling</li>
+            <li>AWS Lambda – serverless Node.js backend</li>
+            <li>Alexa SDK – request/response lifecycle management</li>
+            <li>SSML (Speech Synthesis Markup Language) – optimized voice output</li>
+            <li>Alexa Developer Console – publishing, metadata, and invocation management</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Highlights -->
+<section id="results" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Highlights</h2>
+        <pre style="font-family: 'Courier New', monospace; background: var(--card-dark); padding: 20px; border-radius: 8px; line-height: 1.8;">
+✔  1,000+ quotes and facts from the Bhagavad Gita holy text
+✔  3+ distinct interaction types for varied user experiences
+✔  SSML-optimized speech flow for natural-sounding responses
+✔  Serverless architecture via AWS Lambda
+✔  Published and live on the Amazon Alexa Skills Store
+        </pre>
+    </div>
+</section>
+
+<!-- Links -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+    <div class="container" style="text-align:center;">
+        <a href="https://github.com/SwikrutD/Alexa-Skill-Bhagavad-Gita-Guide" style="margin-left:15px; display: inline-block;" class="btn2">
+            View on GitHub
+        </a> <br> <br>
+        <a href="index.html#projects" class="btn2" style="margin-left:15px">← Back to Portfolio</a>
+    </div>
+</section>
+
+<footer class="copyright">
+    Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+const sections = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: .1 });
+sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>BingeCheck | Project Details</title>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCMTC6HS8X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VCMTC6HS8X');
+    </script>
+</head>
+<body>
+
+<!-- Header / Hero -->
+<header id="header" style="
+    height: 60vh;
+    background:
+    linear-gradient(to bottom, rgba(10,10,10,.4), var(--background-dark)),
+    url('assets/bingecheck_card.jpg') no-repeat center/cover;">
+    <div class="container" style="display:flex;align-items:center;justify-content:center;height:100%;">
+        <h1 style="font-size:3.5rem;text-align:center;">
+            BingeCheck – <span style="color:var(--accent);">Full-Stack Media Tracker</span>
+        </h1>
+    </div>
+</header>
+
+<!-- Project Overview -->
+<section class="fade-in" style="padding:60px 0;">
+    <div class="container">
+        <h2 class="about-text">Project Overview</h2>
+        <p>
+            BingeCheck is a full-stack media tracking platform built to manage and track progress across
+            <strong>movies, TV shows, and anime</strong>. It features normalized data models with season-level
+            progress tracking, user ratings, watchlists, secure authentication, and a self-hosted deployment
+            pipeline — all designed for reliability and performance.
+        </p>
+        <p style="margin-top: 12px; color: var(--text-secondary, #aaa); font-size: 0.9rem;">
+            December 2025 – February 2026
+        </p>
+    </div>
+</section>
+
+<!-- Key Features -->
+<section id="features" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Key Features</h2>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h3>Normalized Data Models</h3>
+                <p>PostgreSQL database with season-level progress tracking, user ratings, and managed watchlists via Prisma ORM with automated migrations.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-lock"></i>
+                <h3>Secure Authentication</h3>
+                <p>JWT-based authentication paired with email-based one-time verification for a secure, seamless login experience.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-server"></i>
+                <h3>Self-Hosted Deployment</h3>
+                <p>Containerized services via Docker and GHCR, self-hosted on a TrueNAS server behind a Cloudflare Tunnel for secure public access.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack -->
+<section id="tech" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Tech &amp; Tools</h2>
+        <ul style="list-style:disc;padding-left:25px;line-height:1.9;">
+            <li>React &amp; TypeScript – frontend with drawer-based editing and responsive UI</li>
+            <li>PostgreSQL &amp; Prisma ORM – relational database with automated migrations</li>
+            <li>JWT &amp; Email OTP – secure authentication flow</li>
+            <li>Docker &amp; GHCR – containerized service deployment</li>
+            <li>TrueNAS – self-hosted server infrastructure</li>
+            <li>Cloudflare Tunnel – secure HTTPS access without port forwarding</li>
+            <li>CORS handling &amp; rate-limited API endpoints</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Highlights -->
+<section id="results" class="fade-in" style="padding:40px 0;">
+    <div class="container">
+        <h2 class="about-text">Technical Highlights</h2>
+        <pre style="font-family: 'Courier New', monospace; background: var(--card-dark); padding: 20px; border-radius: 8px; line-height: 1.8;">
+✔  Normalized schema supporting movies, shows, and anime in one DB
+✔  Season-level progress tracking with per-episode granularity
+✔  JWT + email OTP authentication with secure token management
+✔  Dockerized microservices pushed to GHCR for reproducible builds
+✔  Self-hosted on TrueNAS behind Cloudflare Tunnel (HTTPS)
+✔  Rate-limited REST API endpoints with full CORS configuration
+✔  Automated DB migrations via Prisma; no manual SQL
+        </pre>
+    </div>
+</section>
+
+<!-- Links -->
+<section id="links" class="fade-in" style="padding:40px 0;">
+    <div class="container" style="text-align:center;">
+        <a href="https://tv.fintu.uk/" style="margin-left:15px; display: inline-block;" class="btn">Check out BingeCheck</a> <br>
+        <a href="index.html#projects" class="btn2" style="margin-left:15px;">← Back to Portfolio</a>
+    </div>
+</section>
+
+<footer class="copyright">
+    Copyright © Swikrut Dhanorkar <i class="fa-solid fa-bolt"></i>
+</footer>
+
+<script src="https://kit.fontawesome.com/b6a44dc56a.js" crossorigin="anonymous"></script>
+<script>
+const sections = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: .1 });
+sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
